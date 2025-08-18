@@ -14,8 +14,8 @@ public class PreBuild_SetAndroidPasswordsFromKeychain : IPreprocessBuildWithRepo
 		{
 			var keystoreName = Path.GetFileNameWithoutExtension(PlayerSettings.Android.keystoreName);
 
-			PlayerSettings.keyaliasPass = MacosKeychain.GetKeychainPassword(keystoreName,"unity_android_keyalias");
-			PlayerSettings.keystorePass = MacosKeychain.GetKeychainPassword(keystoreName,"unity_android_keystore");
+			PlayerSettings.Android.keyaliasPass = MacosKeychain.GetKeychainPassword(keystoreName,"unity_android_keyalias");
+			PlayerSettings.Android.keystorePass = MacosKeychain.GetKeychainPassword(keystoreName,"unity_android_keystore");
 		}
 	}
 }

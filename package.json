@@ -1,11 +1,11 @@
 {
-    "name": "net.playables.buildtools",
-    "displayName": "Playables Build Tools",
-    "version": "0.1.0",
-    "unity": "2018.3",
-    "description": "Various Build Tools",
-    "keywords": [],
-    "category": "",
-    "dependencies": {
-     }
+  "name": "net.playables.buildtools",
+  "displayName": "Playables Build Tools",
+  "version": "0.2.0",
+  "unity": "6000.0",
+  "description": "Various Build Tools",
+  "keywords": [],
+  "category": "",
+  "dependencies": {},
+  "_fingerprint": "fed1adefa062093330fed3d3479b8115937981a8"
 }

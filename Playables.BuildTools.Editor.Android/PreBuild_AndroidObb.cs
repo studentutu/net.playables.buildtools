@@ -24,8 +24,8 @@ public class PreBuild_AndroidObb : IPostprocessBuildWithReport, IPreprocessBuild
 		switch (report.summary.platform)
 		{
 			case BuildTarget.Android:
-				oldUseObb = PlayerSettings.Android.useAPKExpansionFiles;
-				PlayerSettings.Android.useAPKExpansionFiles = useObb;
+				oldUseObb = PlayerSettings.Android.splitApplicationBinary;
+				PlayerSettings.Android.splitApplicationBinary = useObb;
 				Debug.Log($"Temporarily set useAPKExpansionFiles to {useObb}");
 				break;
 		}
@@ -36,7 +36,7 @@ public class PreBuild_AndroidObb : IPostprocessBuildWithReport, IPreprocessBuild
 		if (oldUseObb.HasValue)
 		{
 			Debug.Log($"Revert useAPKExpansionFiles to {oldUseObb.Value}");
-			PlayerSettings.Android.useAPKExpansionFiles = oldUseObb.Value;
+			PlayerSettings.Android.splitApplicationBinary = oldUseObb.Value;
 			AssetDatabase.SaveAssets();
 			oldUseObb = null;
 		}
